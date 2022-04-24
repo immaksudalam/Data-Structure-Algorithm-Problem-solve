@@ -23,6 +23,7 @@ public:
             for(auto child: adj[node]){
                 int curnode = child.first;
                 int curc = child.second;
+                if(vis[curnode])continue;
                 pq.push({c + curc, curnode});
             }
         }
